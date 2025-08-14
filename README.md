@@ -34,6 +34,8 @@ API: OpenWeatherMap API (or any weather API you used)
 
 # Usage
   1.Enter the name of the city in the search bar.
+  
   2.Click on Search or press Enter.
+  
   3.View the current weather conditions including temperature, humidity, and weather description.
      
