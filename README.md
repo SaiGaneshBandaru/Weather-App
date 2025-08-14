@@ -16,7 +16,7 @@ Easy to extend for multi-day forecasts.
 
 Front-End: HTML, CSS, JavaScript
 
-Back-End: Python (Flask/Django can be used if applicable)
+Back-End: Python (Flask)
 
 API: OpenWeatherMap API (or any weather API you used)
 
