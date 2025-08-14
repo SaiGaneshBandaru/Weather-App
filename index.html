@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Finder</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="app">
+    <h1 class="title">Weather Finder 🌤️</h1>
+
+    <div class="search">
+      <input id="cityInput" type="text" placeholder="Enter city name" autocomplete="off" />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <!-- Current Weather Card -->
+    <section id="result" class="card hidden">
+      <div class="location"><span id="cityName"></span>, <span id="country"></span></div>
+
+      <div class="row">
+        <img id="weatherIcon" alt="weather icon" class="icon" src="" />
+        <div class="main-info">
+          <div id="temp" class="temp"></div>
+          <div id="desc" class="desc"></div>
+        </div>
+      </div>
+
+      <div class="details">
+        <div>Humidity: <span id="humidity"></span>%</div>
+        <div>Wind: <span id="wind"></span> m/s</div>
+        <div>Pressure: <span id="pressure"></span> hPa</div>
+        <div>Sunrise: <span id="sunrise"></span></div>
+        <div>Sunset: <span id="sunset"></span></div>
+      </div>
+    </section>
+
+    <!-- Forecast Card with horizontal scroll -->
+    <section id="forecast" class="card hidden">
+      <h2>3-Day Forecast</h2>
+      <div id="forecastContainer" class="forecast-container">
+        <!-- Forecast cards inserted via JS -->
+      </div>
+    </section>
+
+    <footer class="footer">Powered by WeatherFinder</footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
